@@ -13,7 +13,7 @@ class _TelaFavoritosState extends State<TelaFavoritos> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Favoritos"),
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.yellow,
         automaticallyImplyLeading: false,
         leading: IconButton(
             onPressed: () => Navigator.pop(context),
@@ -30,6 +30,7 @@ class _TelaFavoritosState extends State<TelaFavoritos> {
                   backgroundImage: NetworkImage(
                       "https://thumbs.dreamstime.com/b/retrato-normal-real-da-pessoa-22299703.jpg")),
             ),
+            Divider(),
             ListTile(
               title: Text("Maria Perola"),
               subtitle: Text("Faxineira"),
@@ -38,6 +39,7 @@ class _TelaFavoritosState extends State<TelaFavoritos> {
                   backgroundImage: NetworkImage(
                       "https://thumbs.dreamstime.com/b/retrato-normal-real-da-pessoa-22299668.jpg")),
             ),
+            Divider(),
             ListTile(
               title: Text("Sará pião"),
               subtitle: Text("Pedreiro"),

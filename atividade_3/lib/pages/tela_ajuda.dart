@@ -13,7 +13,7 @@ class _TelaAjudaState extends State<TelaAjuda> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Ajuda"),
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.red,
         automaticallyImplyLeading: false,
         leading: IconButton(
             onPressed: () => Navigator.pop(context),
@@ -26,10 +26,12 @@ class _TelaAjudaState extends State<TelaAjuda> {
               title: Text("Minha tela travou"),
               leading: Icon(Icons.question_mark),
             ),
+            Divider(),
             ListTile(
               title: Text("Não está abrindo alguma página"),
               leading: Icon(Icons.question_mark),
             ),
+            Divider(),
             ListTile(
               title: Text("Minha mãe não sabe usar o app"),
               leading: Icon(Icons.question_mark),

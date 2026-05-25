@@ -13,7 +13,7 @@ class _TelaConfigState extends State<TelaConfig> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Configuração"),
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.blueGrey,
         automaticallyImplyLeading: false,
         leading: IconButton(
             onPressed: () => Navigator.pop(context),
@@ -26,10 +26,12 @@ class _TelaConfigState extends State<TelaConfig> {
               title: Text("Definir nome"),
               leading: Icon(Icons.person),
             ),
+            Divider(),
             ListTile(
               title: Text("Definir idade"),
               leading: Icon(Icons.cake),
             ),
+            Divider(),
             ListTile(
               title: Text("Definir profissão"),
               leading: Icon(Icons.work),
