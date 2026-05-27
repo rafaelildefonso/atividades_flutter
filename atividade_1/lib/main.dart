@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           width: 300,
           child: Column(
             children: [
-              Image.network("")
+              Image.network(""),
               Text("Quantos anos você tem?"),
               TextField(
                 controller: input,
