@@ -1,3 +1,4 @@
+import 'package:desafio/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class TelaLogin extends StatefulWidget {
@@ -17,6 +18,8 @@ class _TelaLoginState extends State<TelaLogin> {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
           backgroundColor: Colors.green.withAlpha(200),
           content: Text('Login realizado com sucesso!')));
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => TelaHome()));
     } else {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
           backgroundColor: Colors.red.withAlpha(200),
@@ -40,8 +43,8 @@ class _TelaLoginState extends State<TelaLogin> {
                   children: [
                     Text(
                       "Login",
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600, fontSize: 35),
+                      style:
+                          TextStyle(fontWeight: FontWeight.w600, fontSize: 35),
                     ),
                   ],
                 ),
@@ -67,7 +70,7 @@ class _TelaLoginState extends State<TelaLogin> {
                   obscureText: true,
                   decoration: InputDecoration(
                       icon: Icon(Icons.lock),
-                      hintText: "email@email.com",
+                      hintText: "123",
                       labelText: "Digite sua senha",
                       border: OutlineInputBorder(),
                       filled: true,
@@ -77,15 +80,18 @@ class _TelaLoginState extends State<TelaLogin> {
                   height: 30,
                 ),
                 ElevatedButton(
-                    style:
-                        ElevatedButton.styleFrom(minimumSize: Size(0, 60),backgroundColor: Colors.blueAccent),
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: Size(0, 60),
+                        backgroundColor: Colors.blueAccent),
                     onPressed: () {
                       _validarLogin();
                     },
                     child: Text(
                       "Entrar",
                       style: TextStyle(
-                          fontWeight: FontWeight.w700, fontSize: 19,color: Colors.white),
+                          fontWeight: FontWeight.w700,
+                          fontSize: 19,
+                          color: Colors.white),
                     )),
               ],
             ),
