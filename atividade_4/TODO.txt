@@ -1,0 +1,207 @@
+﻿Exercício 4 - App com Login, Cadastro e Home
+Contexto
+Você deverá criar um aplicativo Flutter simples com três telas:
+* TelaLogin
+* TelaCadastro
+* TelaHome
+
+
+O aplicativo deve começar na TelaLogin.
+Na tela de login, o usuário poderá tentar entrar no app ou acessar a tela de cadastro para criar uma conta.
+Se o login for válido, o usuário deverá ser levado para uma tela inicial simples chamada TelaHome.
+Se o usuário clicar em Cadastrar, ao clicar em cadastrar, ir para a TelaHome.
+
+
+________________
+
+
+Tela 1 — Login
+A tela de login deve ser a primeira tela aberta pelo aplicativo.
+Ela deverá conter:
+* Um ícone no topo
+* Um título escrito "Login"
+* Um texto explicativo
+* Um campo para email
+* Um campo para senha
+* Uma mensagem de erro
+* Um botão "Entrar"
+* Um botão "Criar conta"
+
+
+________________
+
+
+Regras da tela de login
+Ao clicar no botão Entrar, o aplicativo deverá validar os campos.
+As regras são:
+Se o email estiver vazio:
+mostrar a mensagem "Digite seu email"
+
+
+Se o email não tiver @:
+mostrar a mensagem "Digite um email válido"
+
+
+Se a senha estiver vazia:
+mostrar a mensagem "Digite sua senha"
+
+
+Se o email estiver válido e a senha preenchida:
+abrir a TelaHome
+
+
+________________
+
+
+Navegação para cadastro
+Na tela de login, o botão Criar conta deverá abrir a tela de cadastro.
+________________
+
+
+Tela 2 — Cadastro
+A tela de cadastro deverá conter:
+Uma AppBar com o título "Cadastro"
+Um ícone no topo
+Um título escrito "Criar Conta"
+Um campo para nome
+Um campo para email
+Um campo para senha
+Um campo para confirmar senha
+Uma mensagem de erro ou sucesso
+Um botão "Cadastrar"
+Um botão "Voltar para Login"
+
+
+________________
+
+
+Regras da tela de cadastro
+Ao clicar no botão Cadastrar, o aplicativo deverá validar os campos.
+As regras são:
+Se o nome estiver vazio:
+mostrar a mensagem "Digite seu nome"
+
+
+Se o email estiver vazio:
+mostrar a mensagem "Digite seu email"
+
+
+Se o email não tiver @:
+mostrar a mensagem "Digite um email válido"
+
+
+Se a senha estiver vazia:
+mostrar a mensagem "Digite sua senha"
+
+
+Se a senha tiver menos de 6 caracteres:
+mostrar a mensagem "A senha precisa ter pelo menos 6 caracteres"
+
+
+Se a confirmação de senha estiver diferente da senha:
+mostrar a mensagem "As senhas não são iguais"
+
+
+Se todos os campos estiverem corretos:
+mostrar a mensagem "Cadastro realizado com sucesso!"
+
+
+________________
+
+
+Navegação para voltar
+Na tela de cadastro, o botão Voltar para Login deverá voltar para a tela de login.
+________________
+
+
+Tela 3 — Home
+A tela Home será aberta depois que o login for validado corretamente.
+Ela deverá conter:
+Uma AppBar com o título "Home"
+Um ícone no centro da tela
+Um texto escrito "Bem-vindo!"
+Um texto menor escrito "Login realizado com sucesso."
+Um botão "Sair"
+
+
+________________
+
+
+Regras da Tela Home
+Ao clicar no botão Sair, o aplicativo deverá voltar para a tela de login.
+A TelaHome deve ser simples, apenas para mostrar que o login funcionou.
+________________
+
+
+Fluxo esperado do app
+O app abre na TelaLogin
+
+
+Na TelaLogin:
+- O usuário pode tentar entrar
+- O usuário pode ir para a TelaCadastro
+
+
+Se o login estiver correto:
+- O app abre a TelaHome
+
+
+Na TelaCadastro:
+- O usuário pode preencher os campos
+- O usuário pode voltar para a TelaLogin
+
+
+Na TelaHome:
+- O usuário pode clicar em Sair
+- O app volta para a TelaLogin
+________________
+
+
+Desafio extra
+Caso termine antes do tempo, melhore o visual do aplicativo.
+Sugestões:
+Colocar os campos dentro de um Container
+Adicionar bordas arredondadas
+Usar uma cor de fundo clara
+Adicionar ícones nos campos
+Centralizar os textos
+Adicionar espaçamento entre os elementos
+Esconder a senha digitada
+Colocar um ícone diferente em cada tela
+
+
+________________
+
+
+Entrega esperada
+Ao final da atividade, o aplicativo deve:
+Abrir na tela de login
+Permitir digitar email e senha
+Validar os campos do login
+Mostrar mensagem de erro no login
+Abrir a TelaHome quando o login for válido
+Ter um botão para abrir a tela de cadastro
+Permitir cadastrar nome, email, senha e confirmação de senha
+Validar os campos do cadastro
+Mostrar mensagem de erro ou sucesso no cadastro
+Permitir voltar da tela de cadastro para a tela de login
+Permitir sair da TelaHome e voltar para a tela de login
+
+
+________________
+
+
+Critérios de avaliação
+Tela de login criada corretamente
+Tela de cadastro criada corretamente
+Tela home criada corretamente
+Campos funcionando
+Validações funcionando
+Mensagens aparecendo na tela
+Navegação entre telas funcionando
+Botão de sair funcionando
+Uso correto de setState
+Uso correto de Navigator.push
+Uso correto de Navigator.pop
+Código organizado e indentado
+Visual minimamente organizado
