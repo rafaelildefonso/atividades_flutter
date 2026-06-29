@@ -1,19 +1,18 @@
-import 'package:desafio/pages/cadastro_page.dart';
 import 'package:desafio/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
-class TelaLogin extends StatefulWidget {
-  const TelaLogin({super.key});
+class TelaCadastro extends StatefulWidget {
+  const TelaCadastro({super.key});
 
   @override
-  State<TelaLogin> createState() => _TelaLoginState();
+  State<TelaCadastro> createState() => _TelaCadastroState();
 }
 
-class _TelaLoginState extends State<TelaLogin> {
+class _TelaCadastroState extends State<TelaCadastro> {
   final TextEditingController email = TextEditingController();
   final TextEditingController senha = TextEditingController();
 
-  void _validarLogin() {
+  void _validarCadastro() {
     if (RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$').hasMatch(email.text) &&
         senha.text.isNotEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -85,10 +84,10 @@ class _TelaLoginState extends State<TelaLogin> {
                         minimumSize: Size(0, 60),
                         backgroundColor: Colors.blueAccent),
                     onPressed: () {
-                      _validarLogin();
+                      _validarCadastro();
                     },
                     child: Text(
-                      "Entrar",
+                      "Cadastrar",
                       style: TextStyle(
                           fontWeight: FontWeight.w700,
                           fontSize: 19,
@@ -96,8 +95,8 @@ class _TelaLoginState extends State<TelaLogin> {
                     )),
                 TextButton(onPressed: () {
                   Navigator.push(
-          context, MaterialPageRoute(builder: (context) => TelaCadastro()));
-                }, child: Text("Fazer cadastro"))
+          context, MaterialPageRoute(builder: (context) => TelaHome()));
+                }, child: Text("Fazer login"))
               ],
             ),
           ),
