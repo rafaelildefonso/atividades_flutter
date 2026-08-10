@@ -25,7 +25,11 @@ class _TelaHomeState extends State<TelaHome> {
                 Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => TelaLogin()));
               },
-              icon: Icon(Icons.logout, color: Colors.white, size: 20,))
+              icon: Icon(
+                Icons.logout,
+                color: Colors.white,
+                size: 20,
+              ))
         ],
       ),
       body: Center(

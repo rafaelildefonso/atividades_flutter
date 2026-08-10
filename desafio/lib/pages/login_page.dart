@@ -1,3 +1,4 @@
+import 'package:desafio/pages/cadastro_page.dart';
 import 'package:desafio/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
@@ -93,6 +94,10 @@ class _TelaLoginState extends State<TelaLogin> {
                           fontSize: 19,
                           color: Colors.white),
                     )),
+                TextButton(onPressed: () {
+                  Navigator.push(
+          context, MaterialPageRoute(builder: (context) => TelaCadastro()));
+                }, child: Text("Fazer cadastro"))
               ],
             ),
           ),
