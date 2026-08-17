@@ -1,0 +1,431 @@
+Bloco 1
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MeuApp());
+}
+
+class MeuApp extends StatelessWidget {
+  const MeuApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+
+      theme: ThemeData(
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.blue,
+          secondary: Colors.amber,
+        ),
+      ),
+
+      home: const TelaRevisao(),
+    );
+  }
+}
+
+
+
+Bloco 2
+
+class TelaRevisao extends StatefulWidget {
+  const TelaRevisao({super.key});
+
+  @override
+  State<TelaRevisao> createState() => _TelaRevisaoState();
+}
+
+class _TelaRevisaoState extends State<TelaRevisao> {
+  String mensagem = 'Clique em uma opção';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold();
+  }
+}
+
+
+Bloco 3
+
+return Scaffold(
+  appBar: AppBar(
+    title: const Text('Revisão Flutter'),
+  ),
+
+  body: const Center(
+    child: Text('Conteúdo da tela'),
+  ),
+
+  floatingActionButton: FloatingActionButton(
+    onPressed: () {
+      setState(() {
+        mensagem = 'Você clicou no botão flutuante';
+      });
+    },
+    child: const Icon(Icons.add),
+  ),
+);
+
+Bloco 4
+
+body: SafeArea(
+  child: Padding(
+    padding: const EdgeInsets.all(20),
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Text('Conteúdo da tela'),
+      ],
+    ),
+  ),
+),
+
+Bloco 5
+
+children: [
+  const Icon(
+    Icons.phone_android,
+    size: 80,
+    color: Colors.blue,
+  ),
+
+  const SizedBox(height: 20),
+
+  const Text(
+    'Revisão de Flutter',
+    style: TextStyle(
+      fontSize: 26,
+      fontWeight: FontWeight.bold,
+      letterSpacing: 1,
+    ),
+  ),
+
+  const SizedBox(height: 10),
+
+  const Text(
+    'Vamos revisar widgets, layout, estilo, botões, estado e navegação.',
+    textAlign: TextAlign.center,
+    style: TextStyle(
+      fontSize: 16,
+    ),
+  ),
+],
+
+
+Bloco 06
+
+const SizedBox(height: 20),
+
+Container(
+  width: 320,
+  padding: const EdgeInsets.all(16),
+  margin: const EdgeInsets.all(10),
+  decoration: BoxDecoration(
+    color: Colors.blue.shade50,
+    borderRadius: BorderRadius.circular(16),
+  ),
+  child: const Text(
+    'O Container funciona como uma caixa. Ele pode ter largura, padding, margin, cor e bordas.',
+    textAlign: TextAlign.center,
+  ),
+),
+
+
+Bloco 07 
+
+const SizedBox(height: 20),
+
+Row(
+  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  children: [
+    ElevatedButton(
+      onPressed: () {
+        setState(() {
+          mensagem = 'Você clicou no botão Azul';
+        });
+      },
+      child: const Text('Azul'),
+    ),
+
+    ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: Colors.amber,
+        foregroundColor: Colors.black,
+        padding: const EdgeInsets.symmetric(
+          horizontal: 24,
+          vertical: 14,
+        ),
+        elevation: 4,
+      ),
+      onPressed: () {
+        setState(() {
+          mensagem = 'Você clicou no botão Destaque';
+        });
+      },
+      child: const Text('Destaque'),
+    ),
+  ],
+),
+
+
+Bloco 08
+
+const SizedBox(height: 20),
+
+Text(
+  mensagem,
+  style: const TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+  ),
+  textAlign: TextAlign.center,
+),
+
+Bloco 09 
+
+const SizedBox(height: 20),
+
+ElevatedButton.icon(
+  onPressed: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const TelaDetalhes(),
+      ),
+    );
+  },
+  icon: const Icon(Icons.arrow_forward),
+  label: const Text('Ir para detalhes'),
+),
+
+Bloco 10
+
+class TelaDetalhes extends StatelessWidget {
+  const TelaDetalhes({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Tela de Detalhes'),
+      ),
+
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(
+                Icons.info,
+                size: 80,
+                color: Colors.amber,
+              ),
+
+              const SizedBox(height: 20),
+
+              const Text(
+                'Você chegou na segunda tela!',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.center,
+              ),
+
+              const SizedBox(height: 10),
+
+              const Text(
+                'Essa tela foi aberta usando Navigator.push.',
+                textAlign: TextAlign.center,
+              ),
+
+              const SizedBox(height: 20),
+
+              ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: const Icon(Icons.arrow_back),
+                label: const Text('Voltar'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+Bloco 11 
+
+class TelaLogin extends StatefulWidget {
+  const TelaLogin({super.key});
+
+  @override
+  State<TelaLogin> createState() => _TelaLoginState();
+}
+
+class _TelaLoginState extends State<TelaLogin> {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController senhaController = TextEditingController();
+
+  String mensagemErro = '';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold();
+  }
+}
+
+Bloco 12
+
+return Scaffold(
+  appBar: AppBar(
+    title: const Text('Login'),
+  ),
+
+  body: SafeArea(
+    child: Padding(
+      padding: const EdgeInsets.all(20),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [],
+      ),
+    ),
+  ),
+);
+
+Bloco 13
+
+children: [
+  const Icon(
+    Icons.lock,
+    size: 80,
+    color: Colors.blue,
+  ),
+
+  const SizedBox(height: 20),
+
+  const Text(
+    'Tela de Login',
+    style: TextStyle(
+      fontSize: 28,
+      fontWeight: FontWeight.bold,
+    ),
+  ),
+
+  const SizedBox(height: 10),
+
+  const Text(
+    'Digite seu email e senha para acessar o app.',
+    textAlign: TextAlign.center,
+    style: TextStyle(
+      fontSize: 16,
+    ),
+  ),
+],
+
+Bloco 14
+
+const SizedBox(height: 30),
+
+TextField(
+  controller: emailController,
+  keyboardType: TextInputType.emailAddress,
+  decoration: const InputDecoration(
+    labelText: 'Email',
+    hintText: 'Digite seu email',
+    border: OutlineInputBorder(),
+    prefixIcon: Icon(Icons.email),
+  ),
+),
+
+Bloco 15
+
+const SizedBox(height: 15),
+
+TextField(
+  controller: senhaController,
+  obscureText: true,
+  decoration: const InputDecoration(
+    labelText: 'Senha',
+    hintText: 'Digite sua senha',
+    border: OutlineInputBorder(),
+    prefixIcon: Icon(Icons.lock),
+  ),
+),
+
+Bloco 16 
+
+const SizedBox(height: 15),
+
+Text(
+  mensagemErro,
+  style: const TextStyle(
+    color: Colors.red,
+    fontWeight: FontWeight.bold,
+  ),
+  textAlign: TextAlign.center,
+),
+
+Bloco 17
+
+const SizedBox(height: 20),
+
+ElevatedButton.icon(
+  onPressed: () {
+    String email = emailController.text;
+    String senha = senhaController.text;
+
+    if (!email.contains('@')) {
+      setState(() {
+        mensagemErro = 'Digite um email válido';
+      });
+    } else if (senha.isEmpty) {
+      setState(() {
+        mensagemErro = 'Digite sua senha';
+      });
+    } else {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const TelaRevisao(),
+        ),
+      );
+    }
+  },
+  icon: const Icon(Icons.login),
+  label: const Text('Entrar'),
+),
+
+Bloco 18
+
+if (!email.contains('@')) {
+  setState(() {
+    mensagemErro = 'Digite um email válido';
+  });
+}
+
+Bloco 19 
+
+else {
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (context) => const TelaRevisao(),
+    ),
+  );
+}
+
+bloco 20
+
+bool emailValido(String email) {
+  final regex = RegExp(r'^[\w\.-]+@[\w\.-]+\.\w+$');
+  return regex.hasMatch(email);
+}
+
+
