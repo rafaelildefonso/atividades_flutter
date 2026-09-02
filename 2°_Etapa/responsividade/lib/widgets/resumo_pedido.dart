@@ -1,0 +1,3 @@
+class ResumoPedido {
+  ResumoPedido();
+}

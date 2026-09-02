@@ -1,0 +1,3 @@
+class AreaProdutos {
+  AreaProdutos();
+}
