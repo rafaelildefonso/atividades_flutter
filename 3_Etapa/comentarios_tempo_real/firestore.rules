@@ -1,0 +1,45 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function logado() {
+      return request.auth != null;
+    }
+
+    function ehDono(dados) {
+      return dados.usuarioId == request.auth.uid;
+    }
+
+    // Publicações (missões): todos os usuários logados podem ver e criar
+    // publicações, mas cada um só altera ou exclui as suas próprias.
+    match /missoes/{missaoId} {
+      allow read: if logado();
+      allow create: if logado() && ehDono(request.resource.data);
+      allow update, delete: if logado() && ehDono(resource.data);
+    }
+
+    // Comentários: todos os usuários logados podem ler e comentar,
+    // mas cada um só pode excluir os próprios comentários.
+    match /comentarios/{comentarioId} {
+      allow read: if logado();
+      allow create: if logado()
+        && ehDono(request.resource.data)
+        && request.resource.data.missaoId is string
+        && request.resource.data.texto is string;
+      allow update, delete: if logado() && ehDono(resource.data);
+    }
+
+    // Demais coleções do projeto (usadas pelos outros apps da aula):
+    // continuam liberadas apenas para usuários autenticados.
+    match /{nomeColecao}/{documento} {
+      allow read, write: if logado()
+        && !(nomeColecao in ['missoes', 'comentarios']);
+    }
+
+    match /{nomeColecao}/{documento}/{sub=**} {
+      allow read, write: if logado()
+        && !(nomeColecao in ['missoes', 'comentarios']);
+    }
+  }
+}

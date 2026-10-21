@@ -1,0 +1,154 @@
+{
+  "project_info": {
+    "project_number": "745895828038",
+    "project_id": "fir-comflutter",
+    "storage_bucket": "fir-comflutter.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745895828038:android:55f507db8ae5be328ac847",
+        "android_client_info": {
+          "package_name": "com.example.cadastro_feiticeiros"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745895828038-02rlttj42f2u53167boa12blj1ipvp0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4IN8XXi7QqJm4jis4zvTBhPp8EtTMlSA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745895828038-02rlttj42f2u53167boa12blj1ipvp0e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "745895828038-2g7cvuvg3k1e07seeastd537aceohvpe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fireFlutter"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745895828038:android:dbd86887233a3a1b8ac847",
+        "android_client_info": {
+          "package_name": "com.example.central_de_missoes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745895828038-02rlttj42f2u53167boa12blj1ipvp0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4IN8XXi7QqJm4jis4zvTBhPp8EtTMlSA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745895828038-02rlttj42f2u53167boa12blj1ipvp0e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "745895828038-2g7cvuvg3k1e07seeastd537aceohvpe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fireFlutter"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745895828038:android:e9b7634bbeda957b8ac847",
+        "android_client_info": {
+          "package_name": "com.example.fire_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745895828038-02rlttj42f2u53167boa12blj1ipvp0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4IN8XXi7QqJm4jis4zvTBhPp8EtTMlSA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745895828038-02rlttj42f2u53167boa12blj1ipvp0e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "745895828038-2g7cvuvg3k1e07seeastd537aceohvpe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fireFlutter"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745895828038:android:9345dee8d7278dd78ac847",
+        "android_client_info": {
+          "package_name": "com.example.muralapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745895828038-02rlttj42f2u53167boa12blj1ipvp0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4IN8XXi7QqJm4jis4zvTBhPp8EtTMlSA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745895828038-02rlttj42f2u53167boa12blj1ipvp0e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "745895828038-2g7cvuvg3k1e07seeastd537aceohvpe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fireFlutter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
